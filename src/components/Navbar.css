@@ -1,0 +1,165 @@
+/* --- Base Navigation Styles --- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(11, 13, 15, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.nav__bar {
+  height: var(--nav-height, 64px); /* Added a fallback of 64px just in case */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.nav__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* --- Desktop Links --- */
+.nav__links {
+  display: flex;
+  gap: clamp(20px, 3vw, 40px);
+  align-items: center;
+}
+
+.nav__link {
+  background: none;
+  border: none;
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent, #fff ); /* Added white fallback */
+  transition: width 0.2s ease;
+}
+
+.nav__link:hover::after,
+.nav__link--active::after {
+  width: 100%;
+  
+}
+
+/* --- Mobile Hamburger Button (Hidden on Desktop) --- */
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-paper, #fff);
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-paper, #fff);
+  transition: transform 0.3s;
+  left: 0;
+}
+
+.hamburger::before { top: -6px; }
+.hamburger::after { top: 6px; }
+
+/* Animate Hamburger into X */
+.nav__toggle--open .hamburger { background-color: transparent; }
+.nav__toggle--open .hamburger::before { transform: translateY(6px) rotate(45deg); }
+.nav__toggle--open .hamburger::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: block; /* Show hamburger */
+  }
+
+  /* Transform links into a dropdown */
+  .nav__links {
+    position: absolute;
+    top: 100%; /* Drop right below the navbar */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(11, 13, 15, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    transition: max-height 0.4s ease-in-out;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  /* Opens the menu */
+  .nav__links--open {
+    max-height: 350px; 
+  }
+
+  .nav__link {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav__link:last-child {
+    border-bottom: none;
+  }
+
+  /* Disable underline hover effect on mobile */
+  .nav__link::after {
+    display: none;
+  }
+}
+
+/* --- Keeping your Dropdown mega-menu styles in case you use them later --- */
+.nav__dropdown {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--color-ink-raised);
+  border-bottom: 1px solid var(--color-line);
+  transition: max-height 0.3s ease;
+}
+.nav__dropdown--open { max-height: 320px; }
+.nav__dropdown-inner { display: flex; gap: 48px; padding: 32px var(--gutter); }
+.nav__dropdown-label { display: block; color: var(--color-mist); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.nav__dropdown-models { display: flex; gap: 32px; }
+.nav__dropdown-model { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 0.9rem; transition: transform 0.2s ease; }
+.nav__dropdown-model:hover { transform: translateY(-2px); }
+.nav__dropdown-thumb { width: 160px; height: 90px; background-size: cover; background-position: center; background-color: var(--color-ink); border-radius: 4px; }

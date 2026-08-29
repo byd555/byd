@@ -1,0 +1,41 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-card {
+  background: #16161a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  position: relative;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-close:hover { color: #fff; }
+
+.modal-card h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 6px; }
+.modal-subtitle { font-size: 0.85rem; color: #9ca3af; margin-bottom: 24px; }
+.modal-form { display: flex; flex-direction: column; gap: 20px; }
+.modal-success { text-align: center; color: #4ade80; line-height: 1.6; padding: 20px 0; }

@@ -1,0 +1,254 @@
+/* --- Global Contact Layout --- */
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  overflow-x: hidden;
+  padding-bottom: 80px;
+}
+
+/* --- Background Image & Overlay --- */
+.contact-bg {
+  position: fixed;
+  inset: 0;
+  /* Using the coastal driving image from the homepage */
+  background-image: url('/assets/images/screenshot-6-tech.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 13, 15, 0.9) 0%, rgba(13, 13, 15, 0.7) 100%);
+  z-index: 1;
+}
+
+/* --- Content Wrapper --- */
+.contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 24px 0 24px;
+}
+
+/* --- Hero Section --- */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.contact-subtitle {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  font-weight: 300;
+  color: #d1d5db;
+  letter-spacing: 0.02em;
+}
+
+/* --- Split Grid Layout --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* --- Glassmorphism Panels --- */
+.contact-panel {
+  background: rgba(22, 22, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 48px 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.panel-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+/* --- Contact Details Side --- */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.contact-block p {
+  font-size: 0.95rem;
+  color: #f3f4f6;
+  line-height: 1.5;
+}
+
+.contact-link {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.contact-link:hover {
+  border-color: #ffffff;
+}
+
+.contact-map {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-map iframe {
+  display: block;
+  border: none;
+  filter: grayscale(80%) contrast(1.2); /* Mutes the bright map colors */
+}
+
+/* --- Form Side --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 16px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.input-group textarea {
+  resize: vertical;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Floating Label Animation */
+.input-group label {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 12px;
+  font-size: 0.75rem;
+  background: #111114; /* Covers the border */
+  padding: 0 4px;
+  color: #ffffff;
+}
+
+/* Submit Button */
+.btn-submit {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: #e5e7eb;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* Success Message */
+.contact-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  min-height: 300px;
+  color: #4ade80;
+}
+
+.contact-success svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.contact-success p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-panel {
+    padding: 32px 24px;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

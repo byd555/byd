@@ -1,0 +1,365 @@
+/* --- Global About Page Wrapper --- */
+.about-page {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --- 1. Video Section --- */
+.about-video-section {
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  background-color: #000;
+}
+
+.about-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Full Screen Background Sections --- */
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 120px 8% 80px 8%;
+  box-sizing: border-box;
+}
+
+/* Background Image Hooks */
+.bg-about-headquarters { background-image: url('/assets/images/about-headquarters.jpg'); }
+.bg-globalization { background-image: url('/assets/images/about-globalization.jpg'); }
+.bg-auto { background-image: url('/assets/images/about-auto.jpg'); }
+.bg-blade-battery { background-image: url('/assets/images/about-blade-battery.jpg'); }
+.bg-dmi { background-image: url('/assets/images/about-dmi.jpg'); }
+.bg-dmp { background-image: url('/assets/images/about-dmp.jpg'); }
+.bg-eplatform { background-image: url('/assets/images/about-eplatform.jpg'); }
+.bg-cockpit { background-image: url('/assets/images/about-cockpit.jpg'); }
+
+/* --- 2. About BYD Overview --- */
+.about-hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 140px 24px 60px 24px;
+}
+
+.about-overlay-top {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.about-text-container {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-main-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.about-main-desc {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+/* --- Section Headers --- */
+.about-section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.section-subtitle {
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  font-weight: 300;
+  color: #e5e5e5;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.max-w-2xl {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- 3. Globalization Europe Card --- */
+.global-map-area {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: auto;
+}
+
+.europe-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 380px;
+}
+
+.europe-card h3 {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.europe-countries-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+/* --- 5. Blade Battery Left Accent List --- */
+.blade-content-layout {
+  display: flex;
+  margin-top: 40px;
+  z-index: 2;
+}
+
+.blade-features-list {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.blade-feature-item {
+  border-left: 2px solid #ffffff;
+  padding-left: 16px;
+}
+
+.blade-feature-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.blade-feature-item p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* --- 6. DM-i Specs Strip --- */
+.dmi-specs-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 32px;
+}
+
+.dmi-spec-item {
+  padding: 0 16px;
+}
+
+.border-right {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dmi-spec-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.dmi-spec-item p {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* --- 8. e-Platform 3.0 --- */
+.eplatform-layout {
+  display: flex;
+  margin-top: 40px;
+  z-index: 2;
+}
+
+.eplatform-features {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eplatform-feature-item {
+  border-left: 2px solid #ffffff;
+  padding-left: 16px;
+}
+
+.eplatform-feature-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.eplatform-feature-item p {
+  font-size: 0.85rem;
+  color: #e5e5e5;
+  line-height: 1.5;
+}
+
+/* --- 10. Technology Platforms (Tabs Section) --- */
+.platform-tabs-section {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 80px 8% 0 8%;
+}
+
+.platform-display-row {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.platform-img-box {
+  flex: 1.2;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  aspect-ratio: 16 / 10;
+}
+
+.platform-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.platform-info-box {
+  flex: 1;
+}
+
+.platform-info-box h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.platform-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.platform-points {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Tabs Bar */
+.platform-tabs-bar {
+  display: flex;
+  border-top: 1px solid #e5e7eb;
+}
+
+.platform-tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-top: 3px solid transparent;
+  padding: 24px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.platform-tab-btn:hover {
+  color: #000000;
+}
+
+.platform-tab-btn--active {
+  border-top: 3px solid #000000;
+  color: #000000;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .blade-content-layout,
+  .eplatform-layout,
+  .platform-display-row {
+    flex-direction: column;
+  }
+
+  .dmi-specs-strip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .border-right {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 16px;
+  }
+
+  .platform-tabs-bar {
+    flex-direction: column;
+  }
+
+  .platform-tab-btn {
+    border-top: none;
+    border-left: 3px solid transparent;
+    text-align: left;
+    padding: 16px;
+  }
+
+  .platform-tab-btn--active {
+    border-top: none;
+    border-left: 3px solid #000000;
+  }
+}

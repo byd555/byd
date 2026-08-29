@@ -1,0 +1,313 @@
+/* --- Global Section Setup --- */
+.home-container {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+.screen-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* --- Background Video Styles --- */
+.home-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Background Image Placeholders */
+.bg-specs { background-image: url('/assets/images/screenshot-2-specs.jpg'); }
+.bg-aesthetics { background-image: url('/assets/images/screenshot-3-aesthetics.jpg'); }
+.bg-interior { background-image: url('/assets/images/screenshot-4-interior.jpg'); }
+.bg-safety { background-image: url('/assets/images/screenshot-5-safety.jpg'); }
+.bg-tech { background-image: url('/assets/images/screenshot-6-tech.jpg'); }
+.bg-cta { background-image: url('/assets/images/screenshot-7-cta.jpg'); }
+
+/* --- Overlays for Text Readability --- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.overlay-dark {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%);
+}
+
+.overlay-light {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.4) 100%);
+}
+
+.overlay-dark-left {
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 50%);
+}
+
+/* --- Typography & Content Positioning --- */
+.content-center {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content-left {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 8%;
+  max-width: 800px;
+}
+
+.content-top { padding-top: 15vh; }
+.content-middle { margin-top: auto; margin-bottom: auto; }
+
+.title-large {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.title-medium {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+  color: #e5e5e5;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.subtitle-long {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  font-weight: 300;
+  color: #f5f5f5;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.uppercase { text-transform: uppercase; }
+.mb-8 { margin-bottom: 2rem; }
+
+/* --- Section 2: Specs Bar --- */
+.specs-bar {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.spec-item {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.border-right { border-right: 1px solid rgba(255, 255, 255, 0.3); }
+.spec-item h3 { font-size: clamp(1.5rem, 2.5vw, 2.5rem); font-weight: 600; margin-bottom: 8px; }
+.spec-item p { font-size: 0.85rem; color: #cccccc; text-transform: none; }
+
+/* --- Plus Button (Centered & Circular) --- */
+.plus-action {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.plus-btn {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background-color: #ffffff;
+  color: #111111;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.plus-action:hover .plus-btn {
+  background-color: #000000;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.plus-btn--active {
+  background-color: #000000;
+  color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.plus-label {
+  color: #ffffff;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* --- Sliding Information Panel (Hidden by Default) --- */
+.slide-panel {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  position: relative;
+}
+
+.slide-panel--open {
+  max-height: 2500px;
+  opacity: 1;
+}
+
+/* --- Sticky Close Button --- */
+.sticky-close-wrapper {
+  position: sticky;
+  top: 80px;
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.sticky-close {
+  pointer-events: auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #e5e5e5;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin-top: 24px;
+}
+
+.sticky-close:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.1);
+}
+
+/* --- Panel Internal Layout --- */
+.panel-content {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.panel-row { display: flex; align-items: center; gap: 48px; }
+.reverse-row { flex-direction: row-reverse; }
+
+.panel-img-box {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.panel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.panel-text-box { flex: 1; padding: 0 24px; }
+.panel-text-box h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 600; margin-bottom: 24px; color: #111111; }
+.panel-text-box p { font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.6; color: #555555; }
+
+/* --- Section 7: CTA Button --- */
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 14px 48px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline:hover { background: #ffffff; color: #000000; }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .specs-bar { flex-direction: column; gap: 32px; bottom: 5%; }
+  .border-right { border-right: none; }
+  .content-left { padding-left: 24px; padding-right: 24px; text-align: center; }
+  .panel-row, .reverse-row { flex-direction: column; gap: 32px; }
+  .panel-content { padding: 60px 24px; gap: 60px; }
+  .panel-text-box { padding: 0; }
+}

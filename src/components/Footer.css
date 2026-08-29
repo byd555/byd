@@ -1,0 +1,125 @@
+/* --- Footer Container --- */
+.footer {
+  background-color: #111114; /* Deep charcoal matching BYD */
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 80px 24px 40px 24px;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Top Grid Setup --- */
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.footer__link {
+  font-size: 0.9rem;
+  color: #9ca3af; /* Soft gray */
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #ffffff;
+}
+
+/* --- Bottom Strip (Legal & Social) --- */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.footer__legal {
+  display: flex;
+  gap: 32px;
+}
+
+/* --- Social Icons --- */
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__social-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.footer__icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.footer__icon-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 24px 40px 24px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .footer__col {
+    gap: 16px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer__legal {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer__social {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
