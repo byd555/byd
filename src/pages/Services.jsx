@@ -15,7 +15,7 @@ export default function Services() {
 
       {/* Customer Care Details Section */}
       <section className="services-details container">
-        <h2 className="details-title">BYD Nigeria</h2>
+        <h2 className="details-title">BYD Canada</h2>
         
         <div className="details-block">
           <h3 className="details-subtitle">Customer Service</h3>

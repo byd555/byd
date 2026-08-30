@@ -58,12 +58,12 @@ export default function Contact() {
             <div className="contact-info-grid">
               <div className="contact-block">
                 <span className="contact-label">Address</span>
-                <p>Abuja, Federal Capital Territory, Nigeria</p>
+                <p>Canada</p>
               </div>
 
               <div className="contact-block">
                 <span className="contact-label">Phone</span>
-                <p><a href="tel:+234000000000" className="contact-link">+234 (0) 000 000 0000</a></p>
+                <p><a href="tel:+234000000000" className="contact-link">+1 (0) 000 000 0000</a></p>
               </div>
 
               <div className="contact-block">
@@ -73,14 +73,14 @@ export default function Contact() {
 
               <div className="contact-block">
                 <span className="contact-label">WhatsApp</span>
-                <p><a href="https://wa.me/234000000000" className="contact-link" target="_blank" rel="noreferrer">Chat with us on WhatsApp</a></p>
+                <p><a href="https://wa.me/000000000000" className="contact-link" target="_blank" rel="noreferrer">Chat with us on WhatsApp</a></p>
               </div>
             </div>
 
             <div className="contact-map">
               <iframe
                 title="Location map"
-                src="https://www.google.com/maps?q=Abuja&output=embed"
+                src="https://www.google.com/maps?q=Canada&output=embed"
                 width="100%"
                 height="240"
                 loading="lazy"

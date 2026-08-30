@@ -207,7 +207,7 @@ export default function AdminDashboard() {
                 </label>
                 <label className="input-group">
                   <input type="number" value={form.price} onChange={(e) => handleChange('price', e.target.value)} placeholder=" " />
-                  <span>Price (₦)</span>
+                  <span>Price ($)</span>
                 </label>
               </div>
 
@@ -312,7 +312,7 @@ export default function AdminDashboard() {
                 <div className="admin-table__thumb" style={{ backgroundImage: model.image_url ? `url(${model.image_url})` : 'none' }} />
                 <div className="admin-table__info">
                   <strong>{model.name}</strong>
-                  <span>{model.capacity || 'Standard'} {model.price && `· ₦${Number(model.price).toLocaleString()}`}</span>
+                  <span>{model.capacity || 'Standard'} {model.price && `· $${Number(model.price).toLocaleString()}`}</span>
                 </div>
                 <div className="admin-table__actions">
                   <button className="admin-btn-edit" onClick={() => startEdit(model)}>Edit</button>

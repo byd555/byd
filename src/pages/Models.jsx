@@ -103,7 +103,7 @@ export default function Models() {
                   <div className="model-info">
                     <p className="model-type">{car.capacity || 'Standard Edition'}</p>
                     <h2 className="model-name">{car.name}</h2>
-                    <p className="model-price">{car.price ? `₦${Number(car.price).toLocaleString()}` : 'Price on Request'}</p>
+                    <p className="model-price">{car.price ? `$${Number(car.price).toLocaleString()}` : 'Price on Request'}</p>
                     
                     <button 
                       className={`btn-learn-more ${expandedCar === car.id ? 'active' : ''}`}
@@ -162,7 +162,7 @@ export default function Models() {
                 <div key={car.id} className="compare-col">
                   <img src={car.image_url} alt={car.name} className="compare-thumb" />
                   <h3>{car.name}</h3>
-                  <p className="compare-price">{car.price ? `₦${Number(car.price).toLocaleString()}` : 'N/A'}</p>
+                  <p className="compare-price">{car.price ? `${Number(car.price).toLocaleString()}` : 'N/A'}</p>
                   <ul className="compare-specs-list">
                     <li><span>Capacity:</span> {car.capacity || 'N/A'}</li>
                     <li><span>Battery:</span> {car.battery_capacity || 'N/A'}</li>
