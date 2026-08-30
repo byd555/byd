@@ -10,6 +10,7 @@ import Models from './pages/Models.jsx';
 import Contact from './pages/Contact.jsx';
 import AdminLogin from './pages/admin/AdminLogin.jsx';
 import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import { Analytics } from "@vercel/analytics/react"; 
 
 // Public pages keep the shared Navbar + Footer.
 function PublicLayout({ children }) {
@@ -44,6 +45,7 @@ export default function App() {
           }
         />
       </Routes>
+              <Analytics />
     </AuthProvider>
   );
 }
