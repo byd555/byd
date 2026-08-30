@@ -221,8 +221,7 @@ export default function Home() {
         </div>
         <div className="panel-content container">
           <div className="panel-row">
-            <div className="panel-img-box">
-              <img src="/assets/images/screenshot-4-interior.jpg" alt="Intelligent Cockpit System" className="panel-img" />
+            g" alt="Intelligent Cockpit System" className="panel-img" />
             </div>
             <div className="panel-text-box">
               <h3>BYD Intelligent Cockpit System</h3>
