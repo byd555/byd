@@ -32,7 +32,7 @@ export default function Services() {
             Email us on: <a href="mailto:byd55814@gmail.com" className="details-link">byd55814@gmail.com</a>
           </p> */}
            <p className="details-text">
-            Email us on: <a href="mailto:byd55814@gmail.com" className="details-link">byd-ca.com</a>
+            Email us on: <a href="mailto:iscm@bydglobalmotorcanada.ltd" className="details-link">byd-ca.com</a>
           </p>
         </div>
         
