@@ -27,6 +27,15 @@ export default function Services() {
             Call us on: <a href="tel:+27211003199" className="details-link">(+27) 211003199</a>
           </p>
         </div>
+        <div className="details-block details-contact">
+          {/* <p className="details-text">
+            Email us on: <a href="mailto:byd55814@gmail.com" className="details-link">byd55814@gmail.com</a>
+          </p> */}
+           <p className="details-text">
+            Email us on: <a href="mailto:byd55814@gmail.com" className="details-link">byd-ca.com</a>
+          </p>
+        </div>
+        
       </section>
     </div>
   );

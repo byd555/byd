@@ -6,7 +6,7 @@ const NAV_LINKS = [
   { label: 'Models', to: '/models' },
   { label: 'Services', to: '/services' },
   { label: 'About', to: '/about' },
-  { label: 'Visit Our Stand', to: '/contact' },
+  { label: 'Contact us', to: '/contact' },
 ];
 
 export default function Navbar() {
