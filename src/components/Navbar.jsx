@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="nav">
       <div className="nav__bar container">
-        <Link to="/" className="nav__brand">Byd</Link>
+        <Link to="/" className="nav__brand">Byd canada</Link>
 
         {/* Links (Changes class when open) */}
         <nav className={`nav__links ${isOpen ? 'nav__links--open' : ''}`}>
