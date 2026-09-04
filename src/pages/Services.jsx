@@ -24,7 +24,7 @@ export default function Services() {
         
         <div className="details-block details-contact">
           <p className="details-text">
-            Call us on: <a href="tel:+27211003199" className="details-link">(+27) 211003199</a>
+            Call us on: <a href="tel:+85267966800" className="details-link">(+852) 6796 6800</a>
           </p>
         </div>
         <div className="details-block details-contact">

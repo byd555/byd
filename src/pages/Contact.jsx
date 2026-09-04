@@ -63,7 +63,7 @@ export default function Contact() {
 
               <div className="contact-block">
                 <span className="contact-label">Phone</span>
-                <p><a href="tel:+234000000000" className="contact-link">+1 (0) 000 000 0000</a></p>
+                <p><a href="tel:+85267966800" className="contact-link">+8 (5267) 966 800</a></p>
               </div>
 
               <div className="contact-block">
@@ -73,7 +73,7 @@ export default function Contact() {
 
               <div className="contact-block">
                 <span className="contact-label">WhatsApp</span>
-                <p><a href="https://wa.me/000000000000" className="contact-link" target="_blank" rel="noreferrer">Chat with us on WhatsApp</a></p>
+                <p><a href="https://wa.me/+85267966800" className="contact-link" target="_blank" rel="noreferrer">Chat with us on WhatsApp</a></p>
               </div>
             </div>
 
