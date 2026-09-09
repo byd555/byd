@@ -28,9 +28,9 @@ export default function Services() {
           </p>
         </div>
         <div className="details-block details-contact">
-          {/* <p className="details-text">
-            Email us on: <a href="mailto:byd55814@gmail.com" className="details-link">byd55814@gmail.com</a>
-          </p> */}
+          <p className="details-text">
+            Telegram Contact: <a href="t.me/+447756908526" className="details-link">+447756908526</a>
+          </p> 
            <p className="details-text">
             Email us on: <a href="mailto:iscm@bydglobalmotorcanada.ltd" className="details-link">byd-ca.com</a>
           </p>
