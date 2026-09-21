@@ -29,7 +29,7 @@ export default function Services() {
         </div>
         <div className="details-block details-contact">
           <p className="details-text">
-            Whatsapp Contact: <a href="https://wa.me/+447756908526" className="details-link">+447756908526</a>
+            Whatsapp Contact: <a href="https://wa.me/+85265147608" className="details-link">+85265147608</a>
 
           </p> 
            <p className="details-text">
